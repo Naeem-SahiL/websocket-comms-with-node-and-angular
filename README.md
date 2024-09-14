@@ -1,8 +1,5 @@
 # Websocket Communications with Node and Angular
 
-This is the repository for the LinkedIn Learning course `Websocket Communications with Node and Angular`. The full
-course is available from [LinkedIn Learning][lil-course-url].
-
 _See the readme file in the main branch for updated instructions and information._
 
 ## Instructions
