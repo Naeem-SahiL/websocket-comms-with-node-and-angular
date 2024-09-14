@@ -1,4 +1,66 @@
-.blue{
-    color: blue;
-    margin:auto;
+:host{
+  display: grid;
+  grid-template-areas:
+  "header login-state"
+  "user-list chat-area"
+  "user-list chat-input";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.login-state{
+  grid-area: login-state;
+  margin-top: 10px;
+
+  .container{
+    max-width: 432px;
+    display: flex;
+    // padding: 16px;
+    mat-form-field{
+      padding-left: 16px;
+      flex: 1;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+  }
+}
+
+.header{
+  grid-area: header;
+
+}
+
+.user-list{
+  grid-area: user-list;
+
+  .user-list-item{
+    background-color: beige;
+    margin: 5px;
+  }
+}
+
+.chat-area{
+  grid-area: chat-area;
+
+  mat-card{
+    max-width: 400px;
+    margin-bottom: 15px;
+    &.current-user{
+      background-color: beige;
+    }
+  }
+}
+
+.chat-input{
+  grid-area: chat-input;
+
+  mat-form-field{
+    width: 432px;
+  }
+
 }

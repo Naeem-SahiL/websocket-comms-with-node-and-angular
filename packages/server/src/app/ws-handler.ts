@@ -29,7 +29,13 @@ export class WsHandler{
 
         console.log("Recieved: ", payload);
 
-        this.userManager.sendToAll(payload);
+        switch(payload.event){
+            case 'chat':
+                console.log(`Chat Message: ${payload.contents}`);
+                this.userManager.relayChatMessage(socket, payload);
+                break;
+        }
+
     }
 
     onSocketClose(socket:WebSocket, code: number, reason: Buffer): void {
